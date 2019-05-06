@@ -1,19 +1,8 @@
-body {
-    background-color: #ffd686;
-}
-
-header{
-    color: #d2691e;
-}
 
 div{
     padding-bottom: 1.5em;
     color: #628395;
     font-size: 1.2em;
-}
-
-i{
-    color: #d2691e;
 }
 
 input{
@@ -40,35 +29,12 @@ span{
 button {
     background-color: #96897b;
     border-style: none;
-    padding: 1em 2em;
+    padding: .65em 1.3em;
     border-radius: 5px;
-    font-size: .75em;
+    font-size: .95em;
     color: #ffd686;
 }
 
-
-#back{
-    margin-top: 2em;
-    text-align: center;
-}
-
-#back a {
-    text-decoration: none;
-    padding: .8em;
-    background-color: #d2691e;
-    border-radius: 15px;
-    font-size: 1.10em;
-    color: #edeee9;
-}
-
-footer{
-    text-align: center;
-}
-
-small{
-    display: block;
-    margin-top: 3em;
-}
 
 
 

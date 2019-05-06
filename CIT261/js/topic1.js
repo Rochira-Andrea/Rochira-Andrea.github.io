@@ -1,5 +1,5 @@
 
-function calcAndArray(){
+function calcAndArray() {
 
     // INPUT: let the user provide the quantities, the operator and the result
     var a = parseInt(document.getElementById('firstOperand').value);
@@ -52,13 +52,28 @@ function calcAndArray(){
     // OUTPUT: display a confirmation message into the specified html element
     document.getElementById('output').innerHTML = message;
 
-    var span = "<span>";
-    // loop through the array an display it where indicated
-    for(var i = 0; i < results.length; i++){
-        span += results[i] + "<span>" + "&nbsp;&nbsp;";
+    // FOR loop through the array an display its items where indicated
+    var spanOne = "<span>";
+
+    for (var i = 0; i < results.length; i++) {
+        spanOne += results[i] + "</span>" + "&nbsp;&nbsp;";
     }
 
-    document.getElementById("arrayList").innerHTML = span;
+    document.getElementById("arrayList").innerHTML = spanOne;
+
+    // WHILE loop to sum array items
+    var j = 0;
+    var sum = 0;
+
+    if (results.length == 0) {
+        document.getElementById("arraySum").innerHTML = "";
+    } else {
+        while (j < results.length) {
+            sum += results[j];
+            j += 1;
+        }
+        document.getElementById("arraySum").innerHTML = "" + sum;
+    }
 
 }
 

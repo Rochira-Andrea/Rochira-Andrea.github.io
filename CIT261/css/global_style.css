@@ -1,0 +1,43 @@
+
+/* BODY*/
+body {
+    background-color: #ffd686;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+i{
+    color: #d2691e;
+}
+
+
+/* HEADER */
+header{
+    color: #d2691e;
+}
+
+
+/* FOOTER */
+
+#back{
+    margin-top: 2em;
+    text-align: center;
+}
+
+#back a {
+    text-decoration: none;
+    padding: .8em;
+    background-color: #d2691e;
+    border-radius: 10px;
+    font-size: 1.10em;
+    color: #edeee9;
+}
+
+footer{
+    text-align: center;
+}
+
+small{
+    display: block;
+    margin-top: 3em;
+}
