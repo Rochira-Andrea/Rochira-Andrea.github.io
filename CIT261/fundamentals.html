@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/fundamentals.css">
     <title>CIT261 | Topic #1</title>
 </head>
-<body style="background: lightgoldenrodyellow">
+<body>
 
     <header>
         <h2 id="header">Variables, Conditional Statements, Loops, Parameters, Functions, Arrays</h2>
@@ -13,24 +14,29 @@
 
     <main>
         <div id="parent">
-            <p>The following interactive section encompasses all the fundamental items stated in the title.</p>
-            <p>We'll start by testing some basic math skills. The result of any successful computation will be added to an array and display below.</p>
-            <p>Click on <i>Check</i> to start the computation or click on <i>Reset</i> to blank the fields</p>
+            <p>The following interactive form encompasses all the fundamental items stated in the title.</p>
+            <p>Let's test some basic math skills. The result of any successful computation will be added to an array and displayed below.</p>
+            <p>After compiling the fields, click on <i>Check</i> to start the computation or click on <i>Reset</i> to blank the fields</p>
 
             <form id="form">
-                <input style="border-color:black" type="text" placeholder="first value" id="firstOperand" class="field" required="required" size="10">
-                <input style="border-color:black" type="text" placeholder="operator" id="operator" class="field" required="required" size="10">
-                <input style="border-color:black" type="text" placeholder="second value" id="secondOperand" class="field" required="required" size="10">
-                = <input style="border-color:black" type="text" placeholder="result" id="answer" class="field" required="required" size="10"><span style="margin-left: 1em;" id="output"></span><br><br>
-                <button type="button" style="background-color:lightgreen" onclick="calcAndArray()">Check</button>
-                <input type="reset" style="background-color:lightgreen" onclick="reset()"><br><br>
+                <input type="text" placeholder="first value" id="firstOperand" class="field" required="required">
+                <input type="text" placeholder="operator" id="operator" class="field" required="required">
+                <input type="text" placeholder="second value" id="secondOperand" class="field" required="required">
+                <span>=</span><input type="text" placeholder="result" id="answer" class="field" required="required"><br><br>
+                <button type="button" onclick="calcAndArray()">Check</button>
+                <button type="reset" onclick="reset()">Reset</button>
             </form>
+
+            <p id="output">&nbsp;</p>
+
             <p id="arrayList">&nbsp;</p>
+
         </div>
 
     </main>
-    <hr>
     <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
         <small>Created by Andrea Rochira</small>
     </footer>
     <script src="js/fundamentals.js"></script>

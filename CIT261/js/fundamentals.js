@@ -1,6 +1,4 @@
 
-
-
 function calcAndArray(){
 
     // INPUT: let the user provide the quantities, the operator and the result
@@ -43,7 +41,7 @@ function calcAndArray(){
 
 
     // check on the solution
-    if (solution == answer) {
+    if (solution === answer) {
         message = "Correct! Good job.";
         // add this answer to the array
         addToArray(answer);
@@ -54,7 +52,7 @@ function calcAndArray(){
     // OUTPUT: display a confirmation message into the specified html element
     document.getElementById('output').innerHTML = message;
 
-    var span = "<span>"
+    var span = "<span>";
     // loop through the array an display it where indicated
     for(var i = 0; i < results.length; i++){
         span += results[i] + "<span>" + "&nbsp;&nbsp;";
@@ -65,28 +63,23 @@ function calcAndArray(){
 }
 
 function add(first, second) {
-    var sum = first + second;
-    return sum;
+    return first + second;
 }
 
 function sub(first, second){
-    var dif = first - second;
-    return dif;
+    return first - second;
 }
 
 function per(first, second){
-    var product = first * second;
-    return product;
+    return first * second;
 }
 
 function div(first, second) {
-    var quoto = first / second;
-    return quoto;
+    return first / second;
 }
 
 function mod(first,second){
-    var modulus = first % second;
-    return modulus;
+    return first % second;
 }
 
 var results = new Array();
@@ -97,7 +90,6 @@ function addToArray(value){
 
 function reset(){
     document.getElementsByClassName("field").reset();
-    document.getElementById("output").style.visibility = 'hidden';
 }
 
 
