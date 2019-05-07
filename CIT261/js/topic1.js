@@ -39,7 +39,6 @@ function calcAndArray() {
             return document.getElementById('output').innerHTML = message;
     }
 
-
     // check on the solution
     if (solution === answer) {
         message = "Correct! Good job.";
