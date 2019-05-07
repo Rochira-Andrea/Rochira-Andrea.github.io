@@ -1,0 +1,93 @@
+#header {
+    text-align: center;
+}
+
+button {
+    background-color: #96897b;
+    border-style: none;
+    padding: .65em 1.3em;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #ffd686;
+    text-align: center;
+    display: block;
+    margin: 1em auto 0;
+    cursor: pointer;
+}
+
+
+/*------------ Wrapper Settings -------------*/
+
+#wrapper {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+#wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper li {
+    background: #fff;
+    background: rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 5px;
+    list-style: none;
+    margin: 2% 10vw;
+    color: #d2691e;
+    font-size: 5vw;
+    height: 1.2em;
+}
+
+
+/*--------------------------
+    RESPONSIVE SETTINGS
+----------------------------*/
+
+@media only screen and (min-width: 401px) {
+
+    #wrapper h2 {
+        font-size: 4.5vw;
+    }
+
+    #wrapper li {
+        font-size: 4.3vw;
+    }
+}
+
+
+@media only screen and (min-width: 560px) {
+
+    #wrapper h2 {
+        font-size: 3.8vw;
+    }
+
+    #wrapper li {
+        font-size: 3.5vw;
+    }
+}
+
+
+@media only screen and (min-width: 800px){
+
+    #wrapper h2{
+        font-size: 2em;
+    }
+
+    #wrapper li{
+        font-size: 1.6em;
+        margin: 2% 20vw;
+    }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    #wrapper li {
+        margin: 2% 25vw;
+    }
+}
