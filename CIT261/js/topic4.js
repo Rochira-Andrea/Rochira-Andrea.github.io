@@ -6,7 +6,6 @@ btn.addEventListener('click', function(){
     var request = new XMLHttpRequest();
 
     request.open('GET','https://api.weatherbit.io/v2.0/current?postal_code=74100&country=IT&key=6323c0e51d8e43b984f1c294bd4f0d0a');
-    request.withCredentials = true;
 
     request.onload = function (){
 
