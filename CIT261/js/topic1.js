@@ -51,7 +51,7 @@ function calcAndArray() {
     // OUTPUT: display a confirmation message into the specified html element
     document.getElementById('output').innerHTML = message;
 
-    // FOR loop through the array an display its items where indicated
+    // FOR loop through the array and display its items where indicated
     var spanOne = "<span>";
 
     for (var i = 0; i < results.length; i++) {
@@ -74,6 +74,16 @@ function calcAndArray() {
         document.getElementById("arraySum").innerHTML = "" + sum;
     }
 
+    // FOR-EACH loop to multiply array items
+    var product = 1;
+    if (results.length == 0) {
+        document.getElementById("arrayProduct").innerHTML = "";
+    } else {
+        for(var result of results){
+            product *= result;
+        }
+        document.getElementById("arrayProduct").innerHTML = "" + product;
+    }
 }
 
 function add(first, second) {
