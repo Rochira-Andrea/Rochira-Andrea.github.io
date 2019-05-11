@@ -4,11 +4,17 @@ var btn = document.getElementById('btn');
 // add an event listener to the button
 btn.addEventListener('click', function(){
 
+    // retrieve the value from the radio button checked
+    var city = document.forms.list.city.value;
+
+    // alternative working solution but a bit slower
+    // var city = document.querySelector('input[name="city"]:checked').value;
+
     // create an instance of XMLHttpRequest
     var request = new XMLHttpRequest();
 
     // establish the connection
-    request.open('GET','https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/current?postal_code=74100&country=IT&key=6323c0e51d8e43b984f1c294bd4f0d0a');
+    request.open('GET','https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/current?postal_code='+city+'&country=US&key=6323c0e51d8e43b984f1c294bd4f0d0a');
 
     // if the request is successfully completed, then go ahead
     request.onload = function () {

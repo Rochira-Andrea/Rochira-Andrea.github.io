@@ -11,7 +11,31 @@ button {
     color: #ffd686;
     text-align: center;
     display: block;
-    margin: 1em auto 0;
+    margin: 2em auto 0;
+    cursor: pointer;
+}
+
+p, form{
+    color: #628395;
+    font-size: 1.2em;
+}
+
+p{
+    text-align: center;
+    margin: 2em 0;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+input {
+    margin: 0 .85em;
+    cursor: pointer;
+}
+
+label{
     cursor: pointer;
 }
 
