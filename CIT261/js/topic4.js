@@ -1,25 +1,26 @@
-
+// create a variable to hold the html button item
 var btn = document.getElementById('btn');
 
+// add an event listener to the button
 btn.addEventListener('click', function(){
 
+    // create an instance of XMLHttpRequest
     var request = new XMLHttpRequest();
 
+    // establish the connection
     request.open('GET','https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/current?postal_code=74100&country=IT&key=6323c0e51d8e43b984f1c294bd4f0d0a');
 
-    request.onload = function (){
+    // if the request is successfully completed, then go ahead
+    request.onload = function () {
 
-        if(request.status >= 200 && request.status <= 400) {
-            var data = JSON.parse(request.responseText);
-            console.log(data);
-            fillHTMLelement(data);
-        } else {
-            console.log("Connected but something is preventing to fetch data");
-        }
-    }
+        // parse the JSON string returned by the API web service server
+        var data = JSON.parse(request.responseText);
 
-    request.onerror = function (){
-        console.log("Connection error");
+        // print the parsed data into the console
+        console.log(data);
+
+        // call for the function responsible to display the data in the html page
+        fillHTMLelement(data);
     }
 
     request.send();

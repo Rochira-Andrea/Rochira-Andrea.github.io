@@ -11,7 +11,7 @@ function calcAndArray() {
     var solution;
     var message;
 
-    // check on the operator
+    // SWITCH statement to check on the operator
     switch (operator) {
         case '+':
             // call for parameterized function
@@ -39,7 +39,7 @@ function calcAndArray() {
             return document.getElementById('output').innerHTML = message;
     }
 
-    // check on the solution
+    // IF statement to check on the solution
     if (solution === answer) {
         message = "Correct! Good job.";
         // add this answer to the array
