@@ -110,6 +110,7 @@ var results = new Array();
 
 function addToArray(value){
     results.push(value);
+    document.getElementById("attempts").innerHTML = "" + results.length;
 }
 
 function reset(){
