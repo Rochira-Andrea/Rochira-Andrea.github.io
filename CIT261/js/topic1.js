@@ -86,6 +86,30 @@ function calcAndArray() {
     }
 }
 
+function selectOperator(ide){
+
+    // OBJECT in place of an Associative Array as recommended by w3schools
+    var operators = {addition:"+",subtraction:"-",multiplication:"*",division:"/",modulus:"%"};
+
+    switch (ide){
+        case "addition":
+            document.getElementById('operator').value = operators.addition;
+            break;
+        case "subtraction":
+            document.getElementById('operator').value = operators.subtraction;
+            break;
+        case "multiplication":
+            document.getElementById('operator').value = operators.multiplication;
+            break;
+        case "division":
+            document.getElementById('operator').value = operators.division;
+            break;
+        case "modulus":
+            document.getElementById('operator').value = operators.modulus;
+            break
+    }
+}
+
 function add(first, second) {
     return first + second;
 }
@@ -106,7 +130,7 @@ function mod(first,second){
     return first % second;
 }
 
-var results = new Array();
+var results = [];
 
 function addToArray(value){
     results.push(value);

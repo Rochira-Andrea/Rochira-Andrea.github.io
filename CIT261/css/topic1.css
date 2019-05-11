@@ -26,13 +26,25 @@ span{
     color: #d2691e;
 }
 
-button {
+.operators {
+    background-color: #96897b;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-style: none;
+    font-size: .7em;
+}
+
+.action {
     background-color: #96897b;
     border-style: none;
     padding: .65em 1.3em;
     border-radius: 5px;
     font-size: .95em;
     color: #ffd686;
+    cursor: pointer;
 }
 
 

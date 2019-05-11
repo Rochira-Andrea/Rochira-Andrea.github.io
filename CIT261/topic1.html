@@ -17,20 +17,27 @@
         <div id="parent">
             <p>The following interactive form encompasses all the fundamental items stated in the title.</p>
             <p>Let's test some basic math skills. The result of any successful computation will be added to an array and displayed below.</p>
-            <p>After compiling the fields, click on <i>Check</i> to start the computation or click on <i>Reset</i> to blank the fields</p>
+            <p>After compiling the fields, click on <i>Check</i> to start the computation or click on <i>Reset</i> to blank the fields.</p>
+            <p>Pick an operator or enter it manually:
+            <button onclick="selectOperator('addition')" type="button" class="operators">+</button>
+            <button onclick="selectOperator('subtraction')" class="operators">-</button>
+            <button onclick="selectOperator('multiplication')" type="button" class="operators">*</button>
+            <button onclick="selectOperator('division')" type="button" class="operators">/</button>
+            <button onclick="selectOperator('modulus')" type="button" class="operators">%</button>
+            </p>
 
             <form id="form">
                 <input type="text" placeholder="first value" id="firstOperand" class="field" required="required">
                 <input type="text" placeholder="operator" id="operator" class="field" required="required">
                 <input type="text" placeholder="second value" id="secondOperand" class="field" required="required">
                 <span>=</span><input type="text" placeholder="result" id="answer" class="field" required="required"><br><br>
-                <button type="button" onclick="calcAndArray()">Check</button>
-                <button type="reset" onclick="reset()">Reset</button>
+                <button class="action" type="button" onclick="calcAndArray()">Check</button>
+                <button class="action" type="reset" onclick="reset()">Reset</button>
             </form>
 
             <p id="output">&nbsp;</p>
 
-            <span>Correct results:&nbsp;&nbsp;</span><span id="arrayList"></span>
+            <span>Correct results provided:&nbsp;&nbsp;</span><span id="arrayList"></span>
             <br><br>
             <span>Sum of array items:&nbsp;&nbsp;</span><span id="arraySum"></span>
             <br><br>
