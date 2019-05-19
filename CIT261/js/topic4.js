@@ -14,7 +14,7 @@ btn.addEventListener('click', function(){
     var request = new XMLHttpRequest();
 
     // establish the connection
-    request.open('GET','https://api.weatherbit.io/v2.0/current?postal_code='+city+'&country=US&key=6323c0e51d8e43b984f1c294bd4f0d0a');
+    request.open('GET','https://api.weatherbit.io/v2.0/current?city_id='+city+'&key=6323c0e51d8e43b984f1c294bd4f0d0a');
 
     // workaround
     // request.open('GET','https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/current?postal_code='+city+'&country=US&key=6323c0e51d8e43b984f1c294bd4f0d0a');
