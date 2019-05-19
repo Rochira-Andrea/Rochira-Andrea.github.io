@@ -1,6 +1,59 @@
+h2{
+    text-align: center;
+}
 
+h3{
+    color: #D2944F;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+}
 
+main{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
 
+/* buttons */
+.action {
+    background-color: #96897b;
+    border-style: none;
+    padding: .65em 1.3em;
+    border-radius: 5px;
+    font-size: .95em;
+    color: #ffd686;
+    cursor: pointer;
+}
+
+p, label{
+    color: #628395;
+    font-size: 1.3em;
+}
+
+label{
+    display: inline-block;
+    width: 6em;
+}
+
+.out{
+    color: #d2691e;
+    font-size: 1.3em;
+}
+
+#jsonstr{
+    color: #d2691e;
+    font-size: 1.3em;
+}
+
+input{
+    padding: .7em;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 1em;
+    margin: .5em 0 0 .5em;
+    color: #d2691e;
+}
 
 
 

@@ -9,13 +9,62 @@
     <body>
 
         <header>
-            <h2 id="header">JSON Parse, Stringify</h2>
+            <h2 id="header">JSON Stringify, Parse</h2>
             <hr>
         </header>
 
         <main>
+            <h3>Stringify</h3>
 
+                <p>Let's start by converting a Javascript object into a string.</p>
+                <p>Click to see a pre-formatted output of the converted object:</p>
+                <button class="action" type="button" onclick="stringIt()">Reveal</button>
+                <p class="out" id="outOne"><br><br><br><br><br><br><br><br><br><br></p>
 
+                <p>Some values in the original object contain the word "Earths".</p>
+                <p>Let's stringify them with alternative values (keep an eye on "volume" and "mass"):</p>
+                <button class="action" type="button" onclick="replaceIt()">Reveal</button>
+                <p class="out" id="outTwo"><br><br><br><br><br><br><br><br><br><br></p>
+
+                <p>One last manipulation. Let's stringify just specific attributes from the original object.</p>
+                <p>Let's say we want just the "name", the "volume", and the "mass":</p>
+                <button class="action" type="button" onclick="filterIt()">Reveal</button>
+                <p class="out" id="outThree"><br><br><br><br></p>
+
+            <h3>Parse</h3>
+
+                <p>This section shows the conversion of a JSON string into a Javascript object.</p>
+                <p>Here is a string in JSON format:</p>
+                <pre id="jsonstr">
+{ "contacts":{"firstName":"Andrea",
+               "lastName":"Rochira",
+               "title":"Mr",
+               "gender":"M",
+               "birthYear":1982,
+               "phone":"(480) 220-0003",
+               "address":{"street":"654 Del Rio street",
+                          "city":"Chandler",
+                          "state":"AZ",
+                          "zipCode":85225}
+              }
+
+}
+                </pre>
+                <p>Let's parse the string and fill the form below.</p>
+                <form>
+                    <button class="action" type="button" onclick="parseJson()">Reveal</button>
+                    <button class="action" type="reset" onclick="reset()">Reset</button><br><br>
+                    <label>First Name:</label><input type="text" class="field" id="firstName"><br>
+                    <label>Last Name:</label><input type="text" class="field" id="lastName"readonly><br>
+                    <label>Gender:</label><input type="text" class="field" id="gender"readonly><br>
+                    <label>Year of Birth:</label><input type="text" class="field" id="birthYear" readonly><br>
+                    <label>Street:</label><input type="text" class="field" id="street" readonly><br>
+                    <label>City:</label><input type="text" class="field" id="city" readonly><br>
+                    <label>State:</label><input type="text" class="field" id="state" readonly><br>
+                    <label>Zip Code:</label><input type="text" class="field" id="zipCode" readonly><br>
+                </form>
+                <br>
+                <br>
         </main>
 
         <footer>

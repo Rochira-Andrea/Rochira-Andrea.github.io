@@ -48,6 +48,10 @@ function calcAndArray() {
         message = "Incorrect. Please review the expression.";
     }
 
+    // Associative Array #1
+    var express = {"fo":a,"op":operator,"so":b, "ans":answer,"message":message};
+    addLogExp(express);
+
     // OUTPUT: display a confirmation message into the specified html element
     document.getElementById('output').innerHTML = message;
 
@@ -88,24 +92,24 @@ function calcAndArray() {
 
 function selectOperator(ide){
 
-    // OBJECT in place of an Associative Array as recommended by w3schools
-    var operators = {addition:"+",subtraction:"-",multiplication:"*",division:"/",modulus:"%"};
+    // Associative Array #2
+    var operators = {"addition":"+","subtraction":"-","multiplication":"*","division":"/","modulus":"%"};
 
     switch (ide){
         case "addition":
-            document.getElementById('operator').value = operators.addition;
+            document.getElementById('operator').value = operators['addition'];
             break;
         case "subtraction":
-            document.getElementById('operator').value = operators.subtraction;
+            document.getElementById('operator').value = operators['subtraction'];
             break;
         case "multiplication":
-            document.getElementById('operator').value = operators.multiplication;
+            document.getElementById('operator').value = operators['multiplication'];
             break;
         case "division":
-            document.getElementById('operator').value = operators.division;
+            document.getElementById('operator').value = operators['division'];
             break;
         case "modulus":
-            document.getElementById('operator').value = operators.modulus;
+            document.getElementById('operator').value = operators['modulus'];
             break
     }
 }
@@ -130,11 +134,47 @@ function mod(first,second){
     return first % second;
 }
 
+// Array to hold results
 var results = [];
 
 function addToArray(value){
     results.push(value);
     document.getElementById("attempts").innerHTML = "" + results.length;
+}
+
+// Array to hold associative arrays of expression logs
+var logs = [];
+
+function addLogExp(log){
+    // add log to array
+    logs.push(log);
+}
+
+function viewLogs(){
+
+    // hold container element
+    var dad = document.getElementById('logs');
+
+    // internal loop counter
+    var j = 1;
+
+    // variable to use for concatenating array contents
+    var par = "<span>";
+
+    // loop through the array of associative array entries
+    for (var i = 0; i < logs.length; i++) {
+
+        par += 'Attempt #'+ j + ':&nbsp;&nbsp;'
+            + logs[i]['fo'] + ' '
+            + logs[i]['op'] + ' '
+            + logs[i]['so'] + ' = '
+            + logs[i]['ans'] + '&nbsp;&nbsp;'
+            + logs[i]['message']
+            + '</span><br>';
+        j++;
+    }
+
+    dad.innerHTML = par;
 }
 
 function reset(){

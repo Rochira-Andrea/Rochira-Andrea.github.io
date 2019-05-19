@@ -22,7 +22,7 @@ span{
     padding: 0 .3em 0 .1em;
 }
 
-#output{
+#output, #logs{
     color: #d2691e;
 }
 
