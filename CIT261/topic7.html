@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- the CSS settings of the stylesheets below are just global settings and unrelated to the JS manipulation -->
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic7.css">
+    <title>CIT261 | Topic #7</title>
+</head>
+<body>
+
+    <header>
+        <h2 id="header">Manipulating CSS Class Properties Using JavaScript</h2>
+        <hr>
+    </header>
+
+    <main id="wrapper">
+
+        <p>An entire set of HTML elements can support the same <i>class</i> attribute.</p>
+        <p>This is very useful for example when all elements in the set need the same style.</p>
+        <p>Click the button to style the labels and fields all at once.</p>
+        <button class="action" type="button" onclick="styleForm()">Style</button>
+        <button class="action" type="button" onclick="unStyleForm()">Un-Style</button>
+        <br><br>
+        <form>
+            <label class="lab">First Name:</label><input type="text" class="field" id="firstName" readonly><br><br>
+            <label class="lab">Last Name:</label><input type="text" class="field" id="lastName" readonly><br><br>
+            <label class="lab">University:</label><input type="text" class="field" id="gender" readonly><br><br>
+            <label class="lab">Course Name:</label><input type="text" class="field" id="birthYear" readonly><br><br>
+        </form>
+        <br>
+        <p>The same method can be used to style all the entries of a list.</p>
+        <p>Click the button to style the bullet points all at once.</p>
+        <button class="action" type="button" onclick="styleList()">Style</button>
+        <button class="action" type="button" onclick="unStyleList()">Un-Style</button>
+        <ul>
+            <li class="bullet">Avengers</li>
+            <li class="bullet">Avengers - Age of Ultron</li>
+            <li class="bullet">Avengers - Infinity War</li>
+            <li class="bullet">Avengers - End Game</li>
+        </ul>
+        <br>
+
+    </main>
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <script src="js/topic7.js"></script>
+</body>
+</html>

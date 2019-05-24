@@ -1,0 +1,15 @@
+
+p{
+    color: #628395;
+    font-size: 1.2em;
+}
+
+.action {
+    background-color: #96897b;
+    border-style: none;
+    padding: .65em 1.3em;
+    border-radius: 5px;
+    font-size: .95em;
+    color: #ffd686;
+    cursor: pointer;
+}
