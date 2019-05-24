@@ -16,7 +16,11 @@
 
     <main id="wrapper">
 
-        <p>An entire set of HTML elements can support the same <i>class</i> attribute.</p>
+        <p>JavaScript can manipulate the style properties of any HTML element.</p>
+        <p>The manipulation can affect the properties of a single element, like the header below:</p>
+        <h3 id="header3">Hover here to see the change in look</h3>
+
+        <p>Or it can involve an entire set of HTML elements that support the same <i>class</i> attribute.</p>
         <p>This is very useful for example when all elements in the set need the same style.</p>
         <p>Click the button to style the labels and fields all at once.</p>
         <button class="action" type="button" onclick="styleForm()">Style</button>
@@ -40,6 +44,12 @@
             <li class="bullet">Avengers - End Game</li>
         </ul>
         <br>
+
+        <p>So far we have changed multiple properties of one or more HTML elements.</p>
+        <p>Let's try to change a single property, like the <i>backgroundImage</i> of an element.</p>
+        <p>Hover over the thumbnail to zoom it in the frame below:</p>
+        <img src="img/ShakespeareInLove.jpg" title="Shakespeare in love" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)"><br><br>
+        <section id="zoom"></section><br>
 
     </main>
     <footer>

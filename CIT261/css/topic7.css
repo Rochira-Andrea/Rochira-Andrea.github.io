@@ -13,3 +13,21 @@ p{
     color: #ffd686;
     cursor: pointer;
 }
+
+h3 {
+    padding: 1em 0 1em;
+}
+
+img{
+    padding: .3em;
+    width: 9em;
+    border: 1px solid #d2691e;
+    border-radius: .25em;
+}
+
+section{
+    height: 333px;
+    width: 450px;
+    background-color: lightgray;
+    background-size: contain;
+}
