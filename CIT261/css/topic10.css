@@ -1,3 +1,4 @@
+
 h3{
     color: #628395;
     font-size: 1.35em;
@@ -12,4 +13,8 @@ video, iframe, canvas{
     width: 450px;
     height: 255px;
     border: 1px solid #628395;
+}
+
+canvas{
+    font-family: 'Fredoka One', cursive;
 }

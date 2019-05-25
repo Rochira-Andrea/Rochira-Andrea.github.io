@@ -18,7 +18,7 @@
 
         <div id="video">
             <h3>Video tag</h3>
-            <p>The following video is played directly from a mp4 file:</p>
+            <p>The following video is played directly from a file:</p>
             <video controls>
                 <source src="media/Pac-Man.mp4" type="video/mp4">
                 If you can't play this video content, it means your browser does not support the video tag.
@@ -31,7 +31,7 @@
         <div>
             <h3>Audio tag</h3>
             <p>David Archuleta sings <i>Glorious</i></p>
-            <audio controls>
+            <audio controls controlsList="nodownload">
                 <source src="media/Glorious.mp3" type="audio/mpeg">
                 If you can't play this audio content, it means your browser does not support the audio tag.
             </audio>
@@ -42,7 +42,11 @@
             <p>The <i>canvas</i> tag is used to draw graphics within an HTML document.</p>
             <p>However, JavaScript is necessary to create the graphics.</p>
 
-            <canvas id="graphic"></canvas>
+            <p>Let's start with some shapes:</p>
+            <canvas id="graphic1">If you don't see colored shapes, it means your browser doesn't support HTML canvas</canvas>
+
+            <p>Let's continue with some moving text:</p>
+            <canvas id="graphic2">If you don't see colored shapes, it means your browser doesn't support HTML canvas</canvas>
 
         </div>
         <br>
