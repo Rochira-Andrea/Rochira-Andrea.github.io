@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- the CSS settings of the stylesheets below are just global settings and unrelated to the JS manipulation -->
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic10.css">
+    <title>CIT261 | Topic #10</title>
+</head>
+<body>
+
+    <header>
+        <h2 id="header">HTML5 Tags for Video, Audio, and Canvas</h2>
+        <hr>
+    </header>
+
+    <main id="wrapper">
+
+        <div id="video">
+            <h3>Video tag</h3>
+            <p>The following video is played directly from a mp4 file:</p>
+            <video controls>
+                <source src="media/Pac-Man.mp4" type="video/mp4">
+                If you can't play this video content, it means your browser does not support the video tag.
+            </video>
+
+            <p>The following video is instead an embedded YouTube video (iframe tag):</p>
+            <iframe src="https://www.youtube.com/embed/nveP_gKVfZY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div>
+            <h3>Audio tag</h3>
+            <p>David Archuleta sings <i>Glorious</i></p>
+            <audio controls>
+                <source src="media/Glorious.mp3" type="audio/mpeg">
+                If you can't play this audio content, it means your browser does not support the audio tag.
+            </audio>
+        </div>
+        <br>
+        <div>
+            <h3>Canvas</h3>
+            <p>The <i>canvas</i> tag is used to draw graphics within an HTML document.</p>
+            <p>However, JavaScript is necessary to create the graphics.</p>
+
+            <canvas id="graphic"></canvas>
+
+        </div>
+        <br>
+    </main>
+
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <!-- the jquery script below is responsible for the responsiveness of the video -->
+    <script src="js/topic10.js"></script>
+
+</body>
+</html>
