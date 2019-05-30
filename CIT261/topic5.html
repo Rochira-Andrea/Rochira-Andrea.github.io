@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic5.css">
+    <title>CIT261 | Topic #5</title>
+</head>
+<body onload="checkLS()">
+
+    <header>
+        <h2 id="header">Local Storage Storing and Retrieving Arrays, Associative Arrays, and Objects</h2>
+        <hr>
+    </header>
+
+    <main>
+        <div id="stayThere">
+            <p>This page shows how <i>Local Storage</i> works.</p>
+        </div>
+
+        <div id="bef">
+            <h3>Step 1</h3>
+            <p>Let's start by providing some information in the form below:</p>
+            <form id="base">
+                <input type="text" placeholder="Nickname" id="nickName" class="field" required="required">
+                <input type="text" placeholder="University" id="university" class="field" required="required">
+                <input type="number" placeholder="Age" id="age" class="field" required="required">
+            </form>
+            <p>Click to store these values in the local storage and to refresh tha page.</p>
+            <button class="action" type="button" onclick="storeAndRefresh()">Store & Refresh</button>
+        </div>
+
+        <div id="aft">
+            <h3>Step 2</h3>
+            <p>Now that the page has been refreshed, let's see if the browser kept the values provided.</p>
+            <p>Below there are three forms that will display the same information.</p>
+            <p>However, each form takes its values from a different JavaScript entity within the local storage.</p>
+            <button class="action" type="button" onclick="retrieve()">Retrieve</button><br><br>
+
+            <div id="flex">
+                <form>
+                    <fieldset>
+                        <legend>From an Array</legend>
+                        <label>Nickname:</label><input type="text" class="field" id="arr1" readonly><br>
+                        <label>University:</label><input type="text" class="field" id="arr2" readonly><br>
+                        <label>Age:</label><input type="number" class="field" id="arr3" readonly><br>
+                    </fieldset>
+                </form>
+
+                <form>
+                    <fieldset>
+                        <legend>From an Associative Array</legend>
+                        <label>Nickname:</label><input type="text" class="field" id="assarr1" readonly><br>
+                        <label>University:</label><input type="text" class="field" id="assarr2" readonly><br>
+                        <label>Age:</label><input type="number" class="field" id="assarr3" readonly><br>
+                    </fieldset>
+                </form>
+
+                <form>
+                    <fieldset>
+                        <legend>From an Object</legend>
+                        <label>Nickname:</label><input type="text" class="field" id="obj1" readonly><br>
+                        <label>University:</label><input type="text" class="field" id="obj2" readonly><br>
+                        <label>Age:</label><input type="number" class="field" id="obj3" readonly><br>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <h3>Step 3</h3>
+            <p>Before leaving, let's clear the local storage and refresh the page once again.</p>
+            <button class="action" type="button" onclick="emptyLS()">Flush</button><br><br>
+        </div>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <script src="js/topic5.js"></script>
+
+</body>
+</html>
