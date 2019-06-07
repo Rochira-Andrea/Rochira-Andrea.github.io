@@ -1,0 +1,92 @@
+h3{
+    color: #d2691e;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+}
+
+p{
+    color: #628395;
+    font-size: 1.2em;
+}
+
+div.reveal{
+    text-align: center;
+}
+
+div.flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+form{
+    margin: 0 0 1.3em;
+}
+
+fieldset{
+    width: 20em;
+}
+
+fieldset button{
+    margin: .5em 35%;
+}
+
+legend{
+    font-size: 1.2em;
+    color: #d2691e;
+}
+
+label{
+    display: inline-block;
+    width: 5em;
+    color: #628395;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+input{
+    padding: .7em;
+    width: 9em;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 1.1em;
+    margin: .5em 0 0 .5em;
+    color: #d2691e;
+}
+
+input[type=text]:focus {
+    background-color: lightcyan;
+}
+
+.action {
+    background-color: #96897b;
+    border-style: none;
+    padding: .65em 1.3em;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ffd686;
+    cursor: pointer;
+}
+
+#list{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#list input{
+    cursor: pointer;
+    width: auto;
+    margin: 0 .5em 0;
+    padding: 0;
+}
+
+#list label{
+    margin-right: 1em;
+    text-align: left;
+}
+
+pre{
+    color: #d2691e;
+    font-size: 1.3em;
+}
