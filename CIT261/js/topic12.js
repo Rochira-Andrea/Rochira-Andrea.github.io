@@ -130,7 +130,7 @@ box.addEventListener("mouseout", function(){
 let bnet = document.getElementById("perrot3D");
 
 bnet.addEventListener("mouseover", function(){
-    bnet.style.cssText = "transform: perspective(90px) rotate3d(1,1,1,45deg); transition: transform 1s ease;";
+    bnet.style.cssText = "transform: perspective(90px) rotate3d(1,1,1,65deg); transition: transform 1s ease;";
 });
 
 bnet.addEventListener("mouseout", function(){
