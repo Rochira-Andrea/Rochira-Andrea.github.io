@@ -1,0 +1,182 @@
+main{
+    margin: 2em 2em;
+}
+
+h2{
+    text-align: center;
+    padding-top: .5em;
+}
+
+h3{
+    color: #628395;
+    font-size: 1.35em;
+}
+
+p{
+    color: #96897b;
+    font-size: 1.2em;
+}
+
+.flexy{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.container {
+    height: 15em;
+    width: 15em;
+    background-color: #93b7d2;
+}
+
+.container-one, .container-two, .container-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation in the first square */
+#morph, #morph-2, #pulse{
+    height: 5em;
+    width: 5em;
+    background-color: #0c5460;
+    border-radius: 50%;
+}
+
+@keyframes morphing-circle-square {
+    0% {
+        border-radius: 50%;
+        background-color: #e17607;}
+    50% {
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(0deg);
+    }
+    75% {
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(-90deg);
+    }
+    100% {
+        border-radius: 50%;
+        background-color: #e17607;
+        transform: rotate(-90deg);
+    }
+}
+
+/* Animation in the second square */
+div#box2{
+    z-index: 2;
+    cursor: pointer;
+}
+
+.half-circle {
+    height: 5em;
+    width: 2.5em;
+    background-color: #0c5460;
+}
+
+@keyframes left-half {
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(0%);
+    }
+    30% {
+        transform: translate(-10%);
+    }
+    40% {
+        transform: translate(-25%);
+    }
+    50% {
+        transform: translate(-50%);
+    }
+    70% {
+        transform: translate(-50%);
+    }
+    80% {
+        transform: translate(-25%);
+    }
+    90% {
+        transform: translate(-10%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.left {
+    border-bottom-left-radius: 5em;
+    border-top-left-radius: 5em;
+}
+
+@keyframes right-half {
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(0%);
+    }
+    30% {
+        transform: translate(10%);
+    }
+    40% {
+        transform: translate(25%);
+    }
+    50% {
+        transform: translate(50%);
+    }
+    70% {
+        transform: translate(50%);
+    }
+    80% {
+        transform: translate(25%);
+    }
+    90% {
+        transform: translate(10%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.right {
+    border-bottom-right-radius: 5em;
+    border-top-right-radius: 5em;
+}
+
+/* Animation in the third square */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(1);
+    }
+    46% {
+        transform: scale(1.55);
+    }
+    47% {
+        transform: scale(1);
+    }
+    59% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.35);
+    }
+    61% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic8.css">
+    <title>CIT261 | Topic #8</title>
+</head>
+<body>
+
+    <header>
+        <h2 id="header">CSS3 Transitions and Animations and triggering them with JavaScript</h2>
+        <hr>
+    </header>
+
+    <main>
+
+        <p>The circle within this boxes will change color and position while hovering over it.</p>
+        <p>However, the left box triggers an animation while the right one triggers a transition:</p>
+        <div class="flexy">
+            <div id="box1" class="container container-one">
+                <div id="morph"></div>
+            </div>
+            <div id="box1-2" class="container container-one">
+                <div id="morph-2"></div>
+            </div>
+        </div>
+        <br>
+        <p>The circle within this box will split in halves while hovering over its container:</p>
+        <div class="flexy">
+            <div id="box2" class="container container-two">
+                <div id="left" class="half-circle left"></div>
+                <div id="right" class="half-circle right"></div>
+            </div>
+        </div>
+        <br>
+        <p>The circle within this box will pulse while hovering over it:</p>
+        <div class="flexy">
+            <div class="container container-three">
+                <div id="pulse" class="pulsing-circle"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <script src="js/topic8.js"></script>
+
+</body>
+</html>
