@@ -60,4 +60,9 @@ pulse.addEventListener('mouseout', function(){
     pulse.style.animation = "";
 });
 
-
+// reveal/hide side menu
+function toggleNav() {
+    let updateElement = document.getElementById("menu-icon");
+    // toggle adds or removes a class attribute accordingly (the class name is used by CSS)
+    updateElement.classList.toggle("open");
+}

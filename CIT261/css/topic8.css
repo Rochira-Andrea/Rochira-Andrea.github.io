@@ -36,6 +36,11 @@ p{
     align-items: center;
 }
 
+.container-four{
+    height: 25em;
+    width: 25em;
+}
+
 /* Animation in the first square */
 #morph, #morph-2, #pulse{
     height: 5em;
@@ -175,8 +180,86 @@ div#box2{
     }
 }
 
+/* Sliding side menu style settings*/
+.sidenav {
+    position: relative;
+    height: 24em;
+    width: 14em;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
 
+.menu-icon {
+    display: inline-block;
+    padding: .5em .5em;
+    width: 100%;
+    height: 24em;
+    transition: .5s ease-in-out;
+}
 
+.bars {
+    cursor: pointer;
+    width: 4em;
+}
+.bars:hover div {
+    background-color: #0c5460;
+}
+
+.nav {
+    display: block;
+    margin-top: 4em;
+}
+
+.menu-link {
+    display: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #e17607;
+    margin: 1em 2em;
+}
+.menu-link:hover {
+    color: white;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 3.5em;
+    height: .4em;
+    background-color: #e17607;
+    margin-top: .4em;
+    border-radius: .2em;
+    transition: .1s ease-in-out;
+}
+
+.open .bar1 {
+    position: absolute;
+    right: 0;
+    transform: rotate(-45deg) translate(-0.45em, 0.55em);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg) translate(0.3em, 0.15em);
+}
+
+.open .bars:hover div {
+    background-color: white;
+}
+
+.open .menu-icon {
+    height: 24em;
+    width: 14em;
+    background-color: black;
+}
+
+.open a {
+    display: block;
+}
 
 
 
