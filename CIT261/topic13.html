@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic13.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <title>CIT261 | Topic #13</title>
+</head>
+<body>
+
+    <header>
+        <h2 id="header">Designing, Defining, and Triggering CSS3 Animations without Custom Libraries</h2>
+        <hr>
+    </header>
+
+    <main>
+
+        <div class="flexy">
+            <div class="flexy2">
+                <div>
+                    <button class="move" type="button" onclick="moveDown()">Down</button>
+                    <button class="move" type="button" onclick="backUp()">Up</button>
+                </div>
+                <div id="box1" class="container container-one">
+                    <div id="translateMe"></div>
+                </div>
+                <p>Without keyframes</p>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <button id="startRoll" class="move" type="button" onclick="startRoll()">Start</button>
+                    <button id="stopRoll" class="move" type="button" onclick="stopRoll()">Stop</button>
+                </div>
+                <div id="box2" class="container container-two">
+                    <div id="rollMe"></div>
+                </div>
+                <p>With keyframes</p>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>Onload trigger</p>
+                </div>
+                <div id="box3" class="container container-three">
+                    <div class="bubble bubble-1"></div>
+                    <div class="bubble bubble-2"></div>
+                    <div class="bubble bubble-3"></div>
+                </div>
+                <p>With keyframes</p>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <button class="move" type="button" onclick="dimIn()">Fade In</button>
+                    <button class="move" type="button" onclick="dimOut()">Fade Out</button>
+                </div>
+                <div id="box4" class="container container-four">
+                    <span id="text">ANDREA</span>
+                </div>
+                <p>With keyframes</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <script src="js/topic13.js"></script>
+
+</body>
+</html>
