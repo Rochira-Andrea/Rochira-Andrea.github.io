@@ -17,14 +17,14 @@ let morph_2 = document.getElementById('morph-2');
 
 // add an event listener to trigger the transition
 morph_2.addEventListener('mouseover', function(){
-    morph_2.style.cssText = "border-radius: 0; background-color: white; transform: rotate(90deg)";
-    morph_2.style.transition = "border-radius 1.5s linear, background-color 1.5s linear, transform 1.5s linear 1.5s";
+    morph_2.style.cssText = "border-radius: 0; background-color: white; transform: rotate(180deg)";
+    morph_2.style.transition = "border-radius 1s linear, background-color 1s linear, transform 1s linear";
 });
 
 // add an event listener to stop the transition
 morph_2.addEventListener('mouseout', function(){
     morph_2.style.cssText = "height: 5em; width: 5em; background-color: #0c5460; border-radius: 50%";
-    morph_2.style.transition = "border-radius 1.5s linear, background-color 1.5s linear, transform 1.5s linear 1.5s";
+    morph_2.style.transition = "border-radius 1s linear, background-color 1s linear, transform 1s linear";
 });
 
 
