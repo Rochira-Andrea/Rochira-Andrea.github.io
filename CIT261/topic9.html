@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/global_style.css">
+    <link rel="stylesheet" type="text/css" href="css/topic9.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <title>CIT261 | Topic #9</title>
+</head>
+<body>
+
+    <header>
+        <h2 id="header">JavaScript Events Especially for Mobile Devices and Animation and Transition Events</h2>
+        <hr>
+    </header>
+
+    <main>
+
+        <h3>JavaScript events on traditional devices</h3>
+
+        <div class="flexy">
+            <div class="flexy2">
+                <div>
+                    <p>"onload" event</p>
+                </div>
+                <div id="box1" class="container container-one">
+                    <div id="spin"></div>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"focus" event</p>
+                </div>
+                <div id="box2" class="container container-two">
+                    <form>
+                        <input id="focus" type="text" class="field" placeholder="Click Here">
+                    </form>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"click" event</p>
+                </div>
+                <div id="box3" class="container container-three">
+                    <div id="scale" onclick="scale(this)"><p>Keep clicking</p></div>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"onmouse" events</p>
+                </div>
+                <div id="box4" class="container container-four">
+                   <p id="tip1">Hover here</p>
+                   <p id="quote">"Once you make a decision, the universe conspires to make it happen." (R. W. Emerson)</p>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"mousedown/up" events</p>
+                </div>
+                <div id="box5" class="container container-five">
+                    <p id="tip2">Hold Down</p>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"keyboard" events</p>
+                </div>
+                <div id="box6" class="container container-six">
+                    <form>
+                        <input id="press" type="text" class="field" placeholder="Enter a string">
+                        <input id="release" type="text" class="field" placeholder="Enter a string">
+                    </form>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"animation" events</p>
+                </div>
+                <div id="box0" class="container container-zero">
+                    <p id="anime">Click Me</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h3>JavaScript events on mobile devices</h3>
+        <p>You may need to use a mobile device or switch your browser to mobile mode (developer tools)</p>
+
+        <div class="flexy">
+            <div class="flexy2">
+                <div>
+                    <p>"touchstart" event</p>
+                </div>
+                <div id="box7" class="container container-one">
+                    <p>Tap Me</p>
+                    <p id="counter">0</p>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"touchstart/end" event</p>
+                </div>
+                <div id="box8" class="container container-eight">
+                    <p>Tap & Hold</p>
+                </div>
+            </div>
+
+            <div class="flexy2">
+                <div>
+                    <p>"touchmove" event</p>
+                </div>
+                <div id="box9" class="container container-nine">
+                    <p>Drag Around</p>
+                    <p id="coordinates">0, 0</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p id="back"><a href="CIT261.html">Back to main page</a></p>
+        <small>Created by Andrea Rochira</small>
+    </footer>
+    <script src="js/topic9.js"></script>
+
+</body>
+</html>

@@ -92,13 +92,11 @@ let text = document.getElementById('text');
 
 function dimIn(){
     text.style.animation = "fadeIn 4s linear 1";
-    text.style.opacity = "1";
 }
 
 // trigger the end animation in the fourth container
 function dimOut(){
     text.style.animation = "fadeOut 4s linear 1";
-    text.style.opacity = "0";
 }
 
 

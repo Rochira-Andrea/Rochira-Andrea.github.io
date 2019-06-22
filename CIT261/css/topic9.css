@@ -1,0 +1,220 @@
+main{
+    margin: 2em 2em;
+}
+
+h2{
+    text-align: center;
+    padding-top: .5em;
+}
+
+h3{
+    color: #628395;
+    font-size: 1.35em;
+    text-align: center;
+}
+
+p{
+    color: #96897b;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.flexy{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.flexy2{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 2em;
+}
+
+.container {
+    height: 15em;
+    width: 15em;
+    background-color: #93b7d2;
+    margin: 0 .5em;
+}
+
+/* FIRST CONTAINER */
+
+#box1, #box3, #box5, #scale, #box7, #box8, #box0{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#box2, #box6{
+    background: #e63b25;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+form{
+    text-align: center;
+}
+
+#spin,#scale{
+    width: 5em;
+    height: 5em;
+    background: #0c5460;
+}
+
+#scale{
+    transition: transform 1.5s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* SECOND CONTAINER */
+
+::placeholder{
+    color: #C2C2C2;
+}
+
+input{
+    padding: .7em;
+    width: 9em;
+    text-align: center;
+    font-size: 1.1em;
+    margin: .5em 0 0 .5em;
+    background: #e63b25;
+    color: #C2C2C2;
+    border: solid 1px #C2C2C2;
+    outline: none;
+    box-sizing: content-box;
+}
+
+/* THIRD CONTAINER */
+.scale{
+    transform: scale(3);
+    transition: transform 1.5s linear;
+}
+
+#scale p{
+    color: #ffd686;
+}
+
+/* FOURTH CONTAINER */
+#box4 {
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+#box4 p{
+    color: #0c5460;
+    font-size: 1.5em;
+}
+
+#box4 p:last-child{
+    display: none;
+}
+
+/* FIFTH CONTAINER */
+#box5 p{
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 1.5em;
+}
+
+/* SEVENTH CONTAINER */
+#box7{
+    position: relative;
+    z-index: 2;
+    border: solid 2px #0c5460;
+
+    /* the property below disable non-standard gestures such a double tap to zoom */
+    touch-action: manipulation;
+}
+
+#box7 p:first-child{
+    position: absolute;
+    z-index: -1;
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 5em;
+    opacity: .35;
+    top: 25%;
+    left: 20%;
+}
+
+#box7 p:last-child{
+    color: #0c5460;
+    font-size: 5em;
+}
+
+/* EIGHT CONTAINER */
+#box8{
+    background: transparent;
+    border: solid 2px #0c5460;
+
+    /* This line of code prevents context menus to appear on long taps
+       unless you're using JavaScript to achieve the same result (see topic9.js)
+
+    pointer-events: none;
+
+     */
+
+}
+
+#box8 p{
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 3em;
+    z-index: -2;
+}
+
+/* NINTH CONTAINER */
+#box9{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+#box9 p{
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 3em;
+    margin: 0;
+}
+
+/* CONTAINER ZERO */
+
+
+#box0 p{
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+    color: #0c5460;
+    font-size: 3em;
+    width: 3em;
+    height: 3em;
+    margin: 0;
+    padding: 17.5% 0 0;
+    background: #ffad92;
+}
+
+.spin{
+    animation: spin 4s linear 400ms;
+}
+
+
+
+
+
+
