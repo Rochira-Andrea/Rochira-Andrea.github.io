@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 20px;
   color: #212529;
@@ -26,7 +30,7 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: .02em;
 }
 
@@ -93,7 +97,7 @@ img::-moz-selection {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
   background-color: white;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #mainNav .navbar-brand {
@@ -114,6 +118,7 @@ img::-moz-selection {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 992px) {
@@ -135,6 +140,11 @@ img::-moz-selection {
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
+
+  #mainNav .navbar-brand svg{
+    fill: #000000;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -228,7 +238,7 @@ header.masthead .site-heading .subheading {
   line-height: 1.1;
   display: block;
   margin: 10px 0 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
@@ -252,7 +262,7 @@ header.masthead .post-heading .subheading {
   font-size: 24px;
   font-weight: 600;
   margin: 10px 0 30px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header.masthead .post-heading .meta {
@@ -401,7 +411,11 @@ footer .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:focus{
+  outline: none;
 }
 
 .btn-primary {
@@ -419,3 +433,76 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+
+svg#logo{
+    display: inline-block;
+    width: 1.2em;
+    height: auto;
+    margin: 0 .5em 0 0;
+    padding-top: 0;
+    transform: rotate(90grad);
+}
+
+.dropdown-menu{
+  background: transparent;
+  border-color: #ffffff;
+  padding: 0;
+}
+
+.dropdown-divider{
+  margin: 0;
+}
+
+.dropdown-menu a{
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.dropdown-menu a:hover{
+  background: transparent;
+  color: #cbd3db;
+}
+
+.fa-bars{
+  font-size: 23px;
+  color: #161616;
+}
+
+div#topBtn{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+svg#top{
+  width: 2.5em;
+  transform: translateY(0em);
+  transition: transform 1s ease;
+}
+
+svg#top:hover{
+  transform: translateY(-1em);
+  transition: transform 1s ease;
+}
+
+
+@media only screen and (max-width: 992px) {
+  svg#logo path{
+    fill: #000000;
+  }
+
+  .dropdown-menu a{
+    color: #7c848c;
+  }
+
+  .dropdown-menu a:hover{
+    color: #3f434b;
+  }
+
+}
+
