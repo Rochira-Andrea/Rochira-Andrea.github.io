@@ -39,6 +39,8 @@ function insert(el){
     document.getElementById('overNav').style.width = "0%";
     document.getElementById('openBtn').style.cssText = "visibility: inherit; transition: visibility .5s linear";
     document.getElementById('hint').style.cssText = "visibility: hidden;";
+    document.getElementById('bottomBtn').style.display = "none";
+    document.getElementById('display-response').style.display = "none";
 }
 
 
