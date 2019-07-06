@@ -50,28 +50,50 @@ submit.addEventListener('click',function(){
     // retrieve the selected value
     let input = document.getElementById('input').value;
 
-    // create an instance of XMLHttpRequest
-    var request = new XMLHttpRequest();
+    if(input === ""){
+        document.getElementById('hint').innerText = "Please enter or select a name";
+    }else {
 
-    // establish the connection
-    request.open('GET','https://api.le-systeme-solaire.net/rest/bodies/{'+input+'}');
+        // create an instance of XMLHttpRequest
+        var request = new XMLHttpRequest();
 
-    // if the request is successfully completed, then go ahead
-    request.onload = function () {
+        // some values have spaces in between, here we match the user selection with the correct body id
+        if (input === "The Little Prince") {
+            input = "petitprince";
 
-        // parse the JSON string returned by the API web service server
-        var data = JSON.parse(request.responseText);
+        } else if (input === "Ultima Thule") {
+            input = "ultima-thule";
+        }
+        // establish the connection
+        request.open('GET', 'https://api.le-systeme-solaire.net/rest.php/bodies/' + input);
 
-        // print the parsed data into the console (for debugging purpose)
-        console.log(data);
 
-        // call for the function responsible to display the data in the html page
-        //fillHTMLelement(data);
+        // if the request is successfully completed, then go ahead
+        request.onload = function () {
+
+            // parse the JSON string returned by the API web service server
+            var data = JSON.parse(request.responseText);
+
+            // print the parsed data into the console (for debugging purpose)
+            console.log(data);
+
+            // call for the function responsible to display the data in the html page
+            fillHTMLelement(data);
+        }
+
+        request.send();
     }
-
-    request.send();
 });
 
+
+function fillHTMLelement(jstring){
+    document.getElementById('bottomBtn').style.cssText = "display: flex; flex-flow: row nowrap; justify-content: center; position:absolute; bottom:1em; left:47.5%; animation: upDownBtn 3s linear infinite;";
+    document.getElementById('display-response').style.cssText = "display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; width: 100vw; height: 100vh;";
+    document.getElementById('body-name').innerText = jstring.englishName;
+
+
+
+}
 
 /* Display Response */
 

@@ -1,22 +1,29 @@
 html{
     scroll-behavior: smooth;
     margin: 0;
+
+    /* this is necessary so the gradient background will stretch right to the bottom when scaling to mobile screens */
+    height: 100%;
 }
 
 body{
-
     background: #F3904F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(75deg, #3B4371 0%, #F3904F 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 0;
+
+    /* this is necessary so the gradient background will stretch right to the bottom when scaling to mobile screens */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.body{
+.sectionOne{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
     align-items: center;
-    padding: 5em 0 3em;
+    justify-content: center;
+    height: 100vh;
 }
 
 .menu{
@@ -87,6 +94,7 @@ h3{
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    align-content: flex-start;
     padding: 1em;
     overflow: scroll;
 }
@@ -144,7 +152,7 @@ span{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-
+    position: relative;
 }
 
 input{
@@ -192,18 +200,51 @@ input::-webkit-calendar-picker-indicator {
     letter-spacing: .1em;
 }
 
-/* Tiles Settings */
-#display-response{
-    /* replace with "display: none;" when ready */
-    visibility: hidden;
+
+/* Button down */
+div#bottomBtn{
+    display:none;
 }
 
-.response-toggle{
+@keyframes upDownBtn {
+
+    0%{
+        opacity: 0;
+        transform: translateY(0em);
+        transition: transform 1s ease;
+    }
+
+    50%{
+        opacity: 1;
+        transform: translateY(1em);
+        transition: transform 1s ease;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateY(0em);
+        transition: transform 1s ease;
+    }
+}
+
+svg#bottom{
+    width: 2.5em;
+}
+
+
+/* Tiles Settings */
+#display-response{
+    display: none;
+}
+
+.visible{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
     padding: .5em;
+    width: 100vw;
+    height: 100vh;
 }
 
 .tile{
@@ -300,6 +341,10 @@ input::-webkit-calendar-picker-indicator {
 
     span{
         width: 80vw;
+    }
+
+    body{
+        height: 100vh;
     }
 
 }
