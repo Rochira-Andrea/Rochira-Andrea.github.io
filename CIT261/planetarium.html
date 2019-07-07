@@ -92,6 +92,7 @@
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Janus</span>
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Jarnsaxa</span>
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Juliet</span>
+        <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Jupiter</span>
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Kale</span>
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Kallichore</span>
         <span class="span-selection" onmouseover="scale(this)" onmouseout="unscale(this)" onclick="insert(this)">Kalyke</span>
@@ -231,23 +232,23 @@
     <!-- Section 2 -->
     <div id="display-response" class="sectionTwo">
 
-        <div class="tile flipBox">
+        <div class="tile">
             <div class="front"><p id="body-name">Name</p></div>
         </div>
 
-        <div class="tile flipBox" onmouseover="flip(this)" onmouseout="flipBack(this)">
-            <div class="front"><p>Physical Characteristics</p></div>
-            <div class="back"><p>BACK</p></div>
+        <div class="tile" onclick="flip(this)">
+            <div class="front"><p>General Info</p><p>(Click or Tap me)</p></div>
+            <div class="back general"></div>
         </div>
 
-        <div class="tile flipBox" onmouseover="flip(this)" onmouseout="flipBack(this)">
-            <div class="front"><p>Orbital Parameters</p></div>
-            <div class="back"><p>BACK</p></div>
+        <div class="tile" onclick="flip(this)">
+            <div class="front"><p>Orbital Parameters</p><p>(Click or Tap me)</p></div>
+            <div class="back orbital"></div>
         </div>
 
-        <div class="tile flipBox" onmouseover="flip(this)" onmouseout="flipBack(this)">
-            <div class="front"><p>History</p></div>
-            <div class="back"><p>BACK</p></div>
+        <div class="tile last" onclick="flip(this)">
+            <div class="front"><p>Physical Characteristics</p><p>(Click or Tap me)</p></div>
+            <div class="back physical"></div>
         </div>
 
     </div>
