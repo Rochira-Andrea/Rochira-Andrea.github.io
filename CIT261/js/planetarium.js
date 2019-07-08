@@ -49,25 +49,32 @@ let submit = document.querySelector('.search-wrapper');
 
 submit.addEventListener('click',function(){
 
+    // make sure the tiles are flipped correctly after any search
+    let tiles = document.querySelectorAll('.tile');
+
+    tiles.forEach(flipBack);
+    function flipBack(el){
+        el.style.cssText = "transform: none; transition: transform .3s linear";
+    }
+
     // retrieve the selected value
     let input = document.getElementById('input').value;
 
     if(input === ""){
         document.getElementById('hint').innerText = "Please enter or select a name";
 
-    // you may want to add another condition here to handle mistyped names
 
     }else {
 
         // create an instance of XMLHttpRequest
-        var request = new XMLHttpRequest();
+        let request = new XMLHttpRequest();
 
         // some values have spaces in between, here we match the user selection with the correct body id
         if (input === "The Little Prince") {
             input = "petitprince";
-
-        } else if (input === "Ultima Thule") {
-            input = "ultima-thule";
+        } else if (input.indexOf(" ") !== -1){
+            input = (input.replace(/\//g, '')).replace(/ /g,"");
+            console.log();
         }
 
         // establish the connection
@@ -78,7 +85,7 @@ submit.addEventListener('click',function(){
         request.onload = function () {
 
             // parse the JSON string returned by the API web service server
-            var data = JSON.parse(request.responseText);
+            let data = JSON.parse(request.responseText);
 
             // print the parsed data into the console (for debugging purpose)
             //console.log(data);
@@ -97,12 +104,6 @@ function fillHTMLelement(jstring){
     document.getElementById('display-response').style.cssText = "display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; width: 100vw; height: 100vh;";
     document.getElementById('hint').innerText = "Great! Now scroll down or click on the arrow";
     document.getElementById('hint').style.visibility = "visible";
-    let tiles = document.querySelectorAll('.tile');
-
-    tiles.forEach(flipBack);
-    function flipBack(el){
-        el.style.cssText = "transform: none; transition: transform .3s linear";
-    }
 
     // make sure to empty any child node within the information tiles
     let backs = document.querySelectorAll('.back');
@@ -128,15 +129,16 @@ function fillHTMLelement(jstring){
     if(jstring.englishName == "Sun"){
             let p = document.createElement('p');
             generalBox.appendChild(p).innerHTML = "The Sun is the star at the center of the Solar System. It is by far the most important source of energy for life on Earth. ";
-        }
+    }
 
-    if(jstring.isPlanet == true){
+    if(jstring.isPlanet === true){
             let p = document.createElement('p');
             generalBox.appendChild(p).innerHTML = jstring.englishName + " is a planet";
-    } else if (jstring.isPlanet == false && jstring.englishName !== "Sun") {
+    } else if (jstring.isPlanet === false && jstring.englishName !== "Sun") {
             let p = document.createElement('p');
             generalBox.appendChild(p).innerHTML = jstring.englishName + " is a moon of " + jstring.aroundPlanet.planet;
     }
+
 
     if(jstring.alternativeName !== ""){
         let p = document.createElement('p');
@@ -211,7 +213,7 @@ function fillHTMLelement(jstring){
 /* Display Response */
 
 function flip(el){
-    el.style.cssText = "transform: rotateY(180deg); transition: transform .3s linear .2s";
+    el.style.cssText = "transform: rotateY(180deg); transition: transform .4s linear .2s";
 }
 
 
