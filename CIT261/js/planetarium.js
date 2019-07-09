@@ -16,6 +16,7 @@ let openBtn = document.getElementById('openBtn');
 openBtn.addEventListener('click',function(){
     document.getElementById('overNav').style.width = "100%";
     document.getElementById('openBtn').style.cssText = "visibility: hidden; transition: visibility .5s linear";
+    document.getElementById('logo').style.cssText = "visibility: hidden";
 });
 
 let closeBtn = document.getElementById('closeBtn');
@@ -23,6 +24,7 @@ let closeBtn = document.getElementById('closeBtn');
 closeBtn.addEventListener('click', function () {
     document.getElementById('overNav').style.width = "0%";
     document.getElementById('openBtn').style.cssText = "visibility: inherit; transition: visibility .5s linear";
+    document.getElementById('logo').style.cssText = "visibility: inherit; transition: visibility .5s linear .4s";
 });
 
 /* Span settings */
@@ -38,6 +40,7 @@ function insert(el){
     fuoco.value = el.innerText;
     document.getElementById('overNav').style.width = "0%";
     document.getElementById('openBtn').style.cssText = "visibility: inherit; transition: visibility .5s linear";
+    document.getElementById('logo').style.cssText = "visibility: inherit; transition: visibility .5s linear .4s";
     document.getElementById('hint').style.cssText = "visibility: hidden;";
     document.getElementById('bottomBtn').style.display = "none";
     document.getElementById('display-response').style.display = "none";
@@ -198,7 +201,7 @@ function fillHTMLelement(jstring){
         physical.appendChild(p).innerHTML = "Mean Radius: " + jstring.meanRadius + " km";
     }
 
-    if(jstring.vol.volValue !== ""){
+    if(jstring.vol.volValue !== "" && jstring.vol.volValue !== 0){
         let p = document.createElement('p');
         physical.appendChild(p).innerHTML = "Volume: " + jstring.vol.volValue + " x 10"+"<sup>"+ jstring.vol.volExponent +"</sup>"+" km"+ "<sup>3</sup>";
     }
@@ -210,10 +213,8 @@ function fillHTMLelement(jstring){
 
 }
 
-/* Display Response */
+/* Flip Tiles */
 
 function flip(el){
     el.style.cssText = "transform: rotateY(180deg); transition: transform .4s linear .2s";
 }
-
-
