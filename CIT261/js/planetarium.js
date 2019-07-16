@@ -1,5 +1,5 @@
-/* Focus Event */
 
+/* Focus Event: just some style for the input field to react on mouse hovering */
 let fuoco = document.querySelector('.select');
 
 fuoco.addEventListener('mouseover', function(){
@@ -10,24 +10,25 @@ fuoco.addEventListener('mouseleave',function () {
     fuoco.style.cssText = "background: transparent; transition: background .5s ease-in-out";
 });
 
-/* Menu Button Settings */ 
-let openBtn = document.getElementById('openBtn');
+/* Menu button settings: on click, open the overlaying selection menu */
 
+let openBtn = document.getElementById('openBtn');
 openBtn.addEventListener('click',function(){
     document.getElementById('overNav').style.width = "100%";
     document.getElementById('openBtn').style.cssText = "visibility: hidden; transition: visibility .5s linear";
     document.getElementById('logo').style.cssText = "visibility: hidden";
 });
 
+/* X button settings: on click, close the overlaying selection menu  */
 let closeBtn = document.getElementById('closeBtn');
-
 closeBtn.addEventListener('click', function () {
     document.getElementById('overNav').style.width = "0%";
     document.getElementById('openBtn').style.cssText = "visibility: inherit; transition: visibility .5s linear";
     document.getElementById('logo').style.cssText = "visibility: inherit; transition: visibility .5s linear .4s";
 });
 
-/* Span settings */
+/* Menu options settings */
+// just a bit of effect on mouse hovering
 function scale(el){
     el.style.cssText = "transform: scale(1.1); transition: transform .5s ease-in-out";
 }
@@ -36,6 +37,7 @@ function unscale(el){
     el.style.cssText = "transform: scale(1); transition: transform .5s ease-in-out";
 }
 
+// fill the input value after the selection of a planet and display/hide other HTML elements as needed
 function insert(el){
     fuoco.value = el.innerText;
     document.getElementById('overNav').style.width = "0%";
@@ -62,10 +64,9 @@ submit.addEventListener('click',function(){
 
     // retrieve the selected value
     let input = document.getElementById('input').value;
-
+    // on submission of empty values, display a reminder
     if(input === ""){
         document.getElementById('hint').innerText = "Please enter or select a name";
-
 
     }else {
 
@@ -73,11 +74,12 @@ submit.addEventListener('click',function(){
         let request = new XMLHttpRequest();
 
         // some values have spaces in between, here we match the user selection with the correct body id
+        // this single heavenly body required a bit more attention
         if (input === "The Little Prince") {
             input = "petitprince";
         } else if (input.indexOf(" ") !== -1){
             input = (input.replace(/\//g, '')).replace(/ /g,"");
-            console.log();
+            //console.log();
         }
 
         // establish the connection
@@ -103,23 +105,27 @@ submit.addEventListener('click',function(){
 
 
 function fillHTMLelement(jstring){
+
+    // at this point we need to visualize specific elements (such as the down-pointing arrow, which invites the user to scroll down)
     document.getElementById('bottomBtn').style.cssText = "display: flex; flex-flow: row nowrap; justify-content: center; position:absolute; bottom:4em; left:47.5%; animation: upDownBtn 2s linear infinite;";
     document.getElementById('display-response').style.cssText = "display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; width: 100vw; height: 100vh;";
     document.getElementById('hint').innerText = "Great! Now scroll down or click on the arrow";
     document.getElementById('hint').style.visibility = "visible";
 
-    // make sure to empty any child node within the information tiles
+    // this query will return an array of HTML elements (precisely the backface div tag of the information tiles)
     let backs = document.querySelectorAll('.back');
-
+    // call the function "clean" for each HTML element in the array returned
     backs.forEach(clean);
-
+    // empty any child node within the information tiles
     function clean(back){
         while (back.firstChild) {
             back.removeChild(back.firstChild);
         }
     }
 
-    /* handle heavenly body name in the Name tile */
+    /* From now to the end of this function, we organize the information in json format provided by the API web service */
+
+    // handle heavenly body name in the Name tile
     if(jstring.englishName !== "") {
         document.getElementById('body-name').innerText = jstring.englishName;
     } else {
@@ -213,7 +219,7 @@ function fillHTMLelement(jstring){
 
 }
 
-/* Flip Tiles */
+/* Function to flip the tiles on click */
 
 function flip(el){
     el.style.cssText = "transform: rotateY(180deg); transition: transform .4s linear .2s";
