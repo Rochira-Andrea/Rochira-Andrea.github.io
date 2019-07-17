@@ -1,3 +1,5 @@
+
+
 /* Focus Event: just some style for the input field to react on mouse hovering */
 let fuoco = document.querySelector('.select');
 
@@ -131,9 +133,45 @@ function fillHTMLelement(jstring){
         document.getElementById('body-name').innerText = jstring.name;
     }
 
+    //set the background of the Name tile
+    let canvas = document.getElementById('sky');
+    canvas.style.cssText =  "background: -webkit-linear-gradient(#00111e 30%, #033d5e);\n" +
+                            "background: -moz-linear-gradient(#00111e 30%, #033d5e);\n" +
+                            "background: -o-linear-gradient(#00111e 30%, #033d5e);\n" +
+                            "background: linear-gradient(#00111e 30%, #033d5e);";
+    drawing(canvas);
+
+    function drawing(c) {
+        let ctx = c.getContext('2d');
+        // fit the canvas in the parent container
+        c.style.width ='100%';
+        c.style.height='100%';
+
+        let xMax = c.width  = canvas.offsetWidth;
+        let yMax = c.height = canvas.offsetHeight;
+
+        let hmTimes = Math.round(xMax + yMax);
+        // create the stars
+        for(let i=0; i<=hmTimes; i++) {
+            let randomX = Math.floor((Math.random()*xMax)+1);
+            let randomY = Math.floor((Math.random()*yMax)+1);
+            let randomSize = Math.floor((Math.random()*2)+1);
+            let randomOpacityOne = Math.floor((Math.random()*9)+1);
+            let randomOpacityTwo = Math.floor((Math.random()*9)+1);
+            let randomHue = Math.floor((Math.random()*360)+1);
+            if(randomSize>1) {
+                ctx.shadowBlur = Math.floor((Math.random()*15)+5);
+                ctx.shadowColor = "white";
+            }
+            ctx.fillStyle = "hsla("+randomHue+", 30%, 80%, ."+randomOpacityOne+randomOpacityTwo+")";
+            ctx.fillRect(randomX, randomY, randomSize, randomSize);
+        }
+    }
+
     // handle information in the General Info frame
     let generalBox = document.querySelector('.general');
 
+    // organize the data
     if(jstring.englishName == "Sun"){
             let p = document.createElement('p');
             generalBox.appendChild(p).innerHTML = "The Sun is the star at the center of the Solar System. It is by far the most important source of energy for life on Earth. ";
@@ -215,8 +253,9 @@ function fillHTMLelement(jstring){
         let p = document.createElement('p');
         physical.appendChild(p).innerHTML = "Mass: " + jstring.mass.massValue + " x 10"+"<sup>"+ jstring.mass.massExponent +"</sup>"+ " kg";
     }
-
 }
+
+
 
 /* Function to flip the tiles on click */
 

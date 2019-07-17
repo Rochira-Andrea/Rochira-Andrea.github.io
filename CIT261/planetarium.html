@@ -15,9 +15,7 @@
 
 <body>
 
-<audio id="bgsong" loop autoplay="autoplay" hidden volume="0.4" controlsList="nodownload" preload="auto" >
-    <iframe src="media/bgsong.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-</audio>
+<audio src="media/bgsong.mp3" id="bgsong" loop autoplay="autoplay" hidden volume="0.4" preload="auto"></audio>
 
 <div id="overNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
@@ -240,6 +238,7 @@
     <div id="display-response" class="sectionTwo">
 
         <div class="tile">
+            <canvas id="sky"></canvas>
             <div class="front"><p id="body-name">Name</p></div>
         </div>
 
@@ -260,5 +259,11 @@
 
     </div>
 <script src="js/planetarium.js"></script>
+<script>
+    let bgsong = document.getElementById('bgsong');
+    bgsong.play();
+    bgsong.volume = 0.5;
+</script>
+
 </body>
 </html>
