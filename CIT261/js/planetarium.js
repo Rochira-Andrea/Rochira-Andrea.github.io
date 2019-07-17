@@ -1,4 +1,3 @@
-
 /* Focus Event: just some style for the input field to react on mouse hovering */
 let fuoco = document.querySelector('.select');
 
@@ -107,7 +106,7 @@ submit.addEventListener('click',function(){
 function fillHTMLelement(jstring){
 
     // at this point we need to visualize specific elements (such as the down-pointing arrow, which invites the user to scroll down)
-    document.getElementById('bottomBtn').style.cssText = "display: flex; flex-flow: row nowrap; justify-content: center; position:absolute; bottom:4em; left:47.5%; animation: upDownBtn 2s linear infinite;";
+    document.getElementById('bottomBtn').style.cssText = "display: flex; flex-flow: row nowrap; justify-content: center; position:absolute; bottom:4em; left:49%; animation: upDownBtn 2s linear infinite;";
     document.getElementById('display-response').style.cssText = "display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; width: 100vw; height: 100vh;";
     document.getElementById('hint').innerText = "Great! Now scroll down or click on the arrow";
     document.getElementById('hint').style.visibility = "visible";
@@ -222,5 +221,9 @@ function fillHTMLelement(jstring){
 /* Function to flip the tiles on click */
 
 function flip(el){
+    el.style.cssText = "transform: rotateY(180deg); transition: transform .4s linear .2s";
+}
+
+function tapFlip(el){
     el.style.cssText = "transform: rotateY(180deg); transition: transform .4s linear .2s";
 }
