@@ -499,6 +499,50 @@ svg#top:hover{
   .dropdown-menu a:hover{
     color: #3f434b;
   }
+}
+
+.emphasis{
+  color: #E9724C;
+}
+
+.emphasisTwo{
+  color:#0c91ac;
+}
+
+.question{
+  color: #8ab9b5;
+}
+
+.anchor_no_dec, .anchor_no_dec:link, .anchor_no_dec:hover{
+  text-decoration: none;
+}
+
+blockquote{
+  color: #E9724C;
+}
+
+.portrait{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.portrait div{
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.author{
+  display: block;
+  width: 10em;
+  height: 10em;
+  border: 3px solid white;
+  border-radius: 50%;
 
 }
+
+
+
+
 
