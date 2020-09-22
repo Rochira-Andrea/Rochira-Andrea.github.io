@@ -1,0 +1,173 @@
+main{
+    background: #96897b;
+    text-align: center;
+    padding: 5%;
+}
+
+#main-h2{
+    display: block;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 6vw;
+    color: #dfd5a5;
+    background-color: rgba(0,0,0,0.1);
+    margin: 0 5%;
+    padding: 5px 9px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+div#guides-wrapper {
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+div.resp{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 15%;
+}
+
+div.guides {
+    width: 290px;
+    border: 3px solid #628395;
+}
+
+div.guides img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #628395;
+}
+
+div.profile {
+    text-align: center;
+    font-size: 5vw;
+    color: #dfd5a5;
+}
+
+div.profile h4 {
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-size: 5.5vw;
+    color: #628395;
+    background-color: rgba(255,255,255,0.2);
+    letter-spacing: 1.6px;
+}
+
+div.profile p{
+    padding: 10px;
+    letter-spacing: 1.5px;
+    line-height: 180%;
+}
+
+/* ------- responsive --------- */
+
+@media only screen and (min-width: 401px) {
+    div.profile h4 {
+        font-size: 4.5vw;
+    }
+
+    div.profile {
+        font-size: 4vw;
+    }
+
+    div.guides {
+        width: 80%;
+    }
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    #main-h2{
+        font-size: 2em;
+    }
+
+    div#guides-wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+    }
+
+    div.guides {
+        width: 250px;
+    }
+
+    div.profile h4 {
+        font-size: 1.2em;
+    }
+
+    div.profile {
+        font-size: 1.4em;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    #main-h2{
+        font-size: 2em;
+    }
+
+    div#guides-wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 2%;
+        padding-top: 2%;
+
+    }
+
+    div.profile {
+        font-size: 1.4em;
+    }
+
+    div.resp{
+        margin-bottom: 5%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    div.guides {
+        width: 300px;
+    }
+
+    div.profile {
+        font-size: 1.3em;
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+
+    div.guides {
+        width: 400px;
+    }
+
+    div.profile {
+        font-size: 1.9em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

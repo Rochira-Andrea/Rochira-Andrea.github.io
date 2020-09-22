@@ -1,0 +1,662 @@
+/* settings for the body part */
+body {
+    margin: 4% 7% ;
+    border: 1px solid;
+    font-family: sans-serif;
+    background-color: #6e8ab6; /* #b6b8bc #6e8ab6;*/
+    border: solid;
+    border-color: #192025;
+}
+
+
+/* settings for the heading, includes navigation section and links */
+
+h1 {
+    text-align: center;
+    font-size: 6.5vw;
+    color: #043353;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 2%;
+}
+
+nav {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: #192025;
+    padding: 2% 0;
+}
+
+.mainlink {
+    text-decoration: none;
+    letter-spacing: 2px;
+    /*font-size: 2em;*/
+    color: #cfdbee;
+    font-size: 4vw;
+    font-weight: 400;
+    padding: 1% 1% 1% 1%;
+    border-radius: 10px;
+    -webkit-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+
+a:hover{
+    background: #cfdbee;
+    color: #043353;
+}
+
+/* settings for the main part - informative divs, boxes inside the divs and other customizations */
+.firstmain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    width: 82.2vw;
+    height: 650px;
+    margin: 0 auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 220px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 4vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 7vw;
+    color: black;
+    font-weight: 300;
+}
+
+#southwest{
+    font-size: 4.5vw;
+}
+
+#summary {
+    background-color: transparent;
+    background-image: url('../img/sunnydaypic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#043353;
+}
+
+#divgvsum {
+    background-color: transparent;
+    background-image: url('../img/thunderafter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:lightgrey;
+    text-shadow: 0px 0 #043353, 0 1px #043353, 1px 0 #043353, 0 1px #043353;
+    border-color: #043353;
+}
+
+#sunny {
+    color: orange;
+    text-shadow: -3px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#spangvsum {
+    color: white;
+    font-weight: 500;
+    font-size: 3vw;
+    align-self: center;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 0 orange, 0 1px orange, 1px 0 orange, 0 1px orange;
+}
+
+
+
+#hourly {
+    width: 82.2vw;
+    height: auto;
+    margin: 2% auto auto auto;
+}
+
+#subhourlydiv{
+    display: flex;
+    width: 82.2vw;
+    height: 500px;
+    margin: 1% auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+}
+
+.panel{
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    width: 11%;
+    height: 100px;
+    padding: 1% 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.panel h3{
+    font-size: 2.5vw;
+    font-weight: 100;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 150%;
+    width: 8vw;
+    height: 4vw;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.panel span{
+    font-size: 3.5vw;
+    letter-spacing: 3px;
+}
+
+
+/* _________________________________________ */
+/* settings for max-width 1030 pixel */
+
+@media (max-width: 1030px) {
+
+.firstmain {
+    height: 500px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 160px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+#subhourlydiv{
+    height: 400px;
+}
+
+.panel{
+    height: 75px;
+}
+
+
+}
+
+
+/* _________________________________________ */
+/* settings for max-width 900 pixel */
+
+@media (max-width: 900px) {
+
+.firstmain {
+    height: 450px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    width: 25vw;
+    height: 150px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+#subhourlydiv{
+    height: 350px;
+}
+
+.panel{
+    height: 70px;
+}
+
+
+
+}
+
+
+
+/* _________________________________________ */
+/* settings for max-width 800 pixel */
+
+@media (max-width: 800px) {
+
+.firstmain {
+    height: 350px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 120px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+#subhourlydiv{
+    height: 300px;
+}
+
+.panel{
+    height: 65px;
+}
+
+
+
+}
+
+/* _________________________________________ */
+/* settings for max-width 600 pixel */
+
+@media (max-width: 600px) {
+
+.firstmain {
+    height: 250px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 90px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+#subhourlydiv{
+    height: 340px;
+    flex-grow: 1;
+}
+
+.panel{
+    justify-content: space-between;
+    width: 14%;
+    height: 60px;
+}
+
+.panel h3{
+    font-size: 3vw;
+    width: 9vw;
+    height: 5.5vw;
+}
+
+.panel span{
+    font-size: 4.5vw;
+}
+
+
+}
+
+
+/* _________________________________________ */
+/* settings for max-width 500 pixel */
+
+@media (max-width: 500px) {
+
+.firstmain {
+    height: 320px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35vw;
+    height: 85px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 7vw;
+    color: black;
+    font-weight: 300;
+}
+
+#southwest{
+    font-size: 5vw;
+}
+
+#subhourlydiv{
+    height: 300px;
+    flex-grow: 1;
+}
+
+.panel{
+    justify-content: space-between;
+    width: 14%;
+    height: 50px;
+}
+
+.panel h3{
+    font-size: 3.5vw;
+    width: 8.5vw;
+    height: 5.5vw;
+}
+
+.panel span{
+    font-size: 4.5vw;
+}
+
+
+}
+
+
+/* _________________________________________ */
+/* settings for max-width 400 pixel */
+
+@media (max-width: 400px) {
+
+.firstmain {
+    height: 300px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35vw;
+    height: 78px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6.5vw;
+    color: black;
+    font-weight: 300;
+}
+
+#southwest{
+    font-size: 5vw;
+}
+
+#subhourlydiv{
+    height: 280px;
+    flex-grow: 1;
+}
+
+.panel{
+    justify-content: space-between;
+    width: 14%;
+    height: 45px;
+}
+
+.panel h3{
+    font-size: 3.5vw;
+    width: 8.5vw;
+    height: 5.5vw;
+}
+
+.panel span{
+    font-size: 4.5vw;
+}
+
+
+}
+
+/* _________________________________________ */
+/* settings for min-width 1300 pixel */
+/*
+@media (min-width: 1300px) {
+
+main {
+    margin-top: 8%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 220px;
+    color: #043353;
+    border: 2px solid;
+    margin-bottom: 8%;
+
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+}
+
+/* _________________________________________ */
+/* settings for min-width 1900 pixel */
+
+@media (min-width: 1900px) {
+
+.firstmain {
+    height: 850px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25vw;
+    height: 300px;
+    color: #043353;
+    border: 2px solid;
+    background-color: #cfdbee;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.subheader {
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+.span {
+    font-size: 6vw;
+    color: black;
+    font-weight: 300;
+}
+
+#subhourlydiv{
+    height: 600px;
+}
+
+.panel{
+    height: 130px;
+}
+
+}
+
+/* Settings for the sketches section */
+#sketch{
+    text-align: center;
+
+}
+
+#sketches {
+    text-align: center;
+    font-size: 4vw;
+    background-color: #192025;
+    letter-spacing: 1px;
+    /*font-size: 2em;*/
+    color: #cfdbee;
+    font-weight: 300;
+    padding: 1% 0;
+}
+
+div h4 {
+    font-size:3vw;
+    text-transform: uppercase;
+    color: #192025;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/* settings for the footer */
+
+#footer {
+    text-align: center;
+}
+
+footer {
+    display: inline-block;
+    font-size: 2.8vw;
+    margin: 5% auto;
+    color: #043353;
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.30);
+}
