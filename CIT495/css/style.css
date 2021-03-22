@@ -470,6 +470,7 @@ svg#logo{
 }
 
 div#topBtn{
+  margin-top: 2em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -542,7 +543,56 @@ blockquote{
 
 }
 
+/* Accordion settings */
 
+@media screen {
+  button.accordion {
+      margin: 2.5em 0 0 0;
+      width: 100%;
+      background-color: whitesmoke;
+      border: none;
+      outline: none;
+      text-align: left;
+      padding: 15px 20px;
+      font-size: 18px;
+      color: #0c91ac;
+      cursor: pointer;
+      transition: background-color 0.5s linear;
+  }
+}
 
+@media screen {
+  button.accordion::after {
+      content: '-';
+      font-size: 22px;
+      font-weight: 500;
+      float: right;
+  }
+}
 
+@media screen {
+  button.accordion.is-closed::after {
+      content: '+';
+      font-weight: 500;
+  }
+}
 
+@media screen {
+  button.accordion:hover, button.accordion.is-closed {
+      background-color: #ddd;
+  }
+}
+
+.accordion-content {
+  background-color: white;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+div.accordion-content li{
+
+  font-size: .75em;
+
+}
