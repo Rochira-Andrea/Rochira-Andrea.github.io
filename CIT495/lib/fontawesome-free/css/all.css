@@ -1446,7 +1446,11 @@ readers do not read off random characters that represent icons */
   content: "\f23e"; }
 
 .fa-external-link-alt:before {
-  content: "\f35d"; }
+  content: "\f35d"; 
+  font-size: .9em;
+  color: #0c91ac;
+  padding-left: .2em;
+}
 
 .fa-external-link-square-alt:before {
   content: "\f360"; }

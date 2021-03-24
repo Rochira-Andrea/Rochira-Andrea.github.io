@@ -8,6 +8,7 @@ body {
   font-size: 20px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
+  background-color: #ffe6cc;
 }
 
 p {
@@ -549,8 +550,11 @@ blockquote{
   button.accordion {
       margin: 2.5em 0 0 0;
       width: 100%;
-      background-color: whitesmoke;
-      border: none;
+      background-color: #ffe6cc;
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid #0c91ac;
+      border-bottom: 1px solid #0c91ac;
       outline: none;
       text-align: left;
       padding: 15px 20px;
@@ -579,20 +583,21 @@ blockquote{
 
 @media screen {
   button.accordion:hover, button.accordion.is-closed {
-      background-color: #ddd;
+    background-color: #ffe6cc;
   }
 }
 
 .accordion-content {
-  background-color: white;
   padding: 0 20px;
   max-height: 0;
-  overflow: hidden;
+  overflow:auto;
   transition: max-height 0.5s ease-in-out;
+  background-color: #ffe6cc;
 }
 
 div.accordion-content li{
 
   font-size: .75em;
+  background-color: #ffe6cc;
 
 }
