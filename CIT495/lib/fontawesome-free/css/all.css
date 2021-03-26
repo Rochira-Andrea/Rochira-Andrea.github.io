@@ -267,7 +267,8 @@ readers do not read off random characters that represent icons */
   content: "\f36d"; }
 
 .fa-anchor:before {
-  content: "\f13d"; }
+  content: "\f13d";
+}
 
 .fa-android:before {
   content: "\f17b"; }
@@ -2371,7 +2372,12 @@ readers do not read off random characters that represent icons */
   content: "\f3c0"; }
 
 .fa-link:before {
-  content: "\f0c1"; }
+  content: "\f0c1"; 
+  font-size: .65em;
+  vertical-align:middle;
+  padding-left: .15em;
+  opacity: .9;
+}
 
 .fa-linkedin:before {
   content: "\f08c"; }
