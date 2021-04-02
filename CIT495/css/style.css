@@ -92,8 +92,7 @@ img::-moz-selection {
 
 #mainNav {
   position: absolute;
-  border-bottom: 1px solid #e9ecef;
-  background-color: white;
+  background-color: #fff;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -511,6 +510,12 @@ svg#top:hover{
   color:#0c91ac;
 }
 
+.divider_line{
+  display: block;
+  border-bottom: 1px solid #bbb;
+  margin: .25em 0 1em;
+}
+
 .question{
   color: #8ab9b5;
 }
@@ -593,4 +598,8 @@ div.accordion-content li{
   font-size: .75em;
   background-color: #ffe6cc;
 
+}
+
+.smaller{
+  font-size: .85em;
 }
