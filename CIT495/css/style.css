@@ -603,3 +603,7 @@ div.accordion-content li{
 .smaller{
   font-size: .85em;
 }
+
+.fix-bg{
+  background-color: #ffe6cc;
+}
