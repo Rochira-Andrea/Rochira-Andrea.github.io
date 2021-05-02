@@ -164,26 +164,18 @@
                 <ul class="list-inline text-center">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.sturgewebersyndrome.life%2Fpages%2Fport_wine_stain.html">
-                  <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.sturgewebersyndrome.life%2Fpages%2Fport_wine_stain.html&text=">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.sturgewebersyndrome.life%2Fpages%2Fport_wine_stain.html&title=">
-                      <span class="fa-stack fa-lg">
+                        <a href="javascript:void(0);" title="Copy page link">
+                        <span class="fa-stack fa-lg clipboard" data-toggle="popover-click" data-placement="top" data-content="Link Copied!">
                           <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                      </span>
+                          <i class="fas fa-copy fa-stack-1x fa-inverse"></i>
+                        </span>
                         </a>
                     </li>
                 </ul>
@@ -219,6 +211,40 @@
                 }
             }
         }    
+</script>
+
+<script>
+    // copy button action
+    var $temp = $("<input>");
+    var $url = $(location).attr('href');
+
+    $('.clipboard').on('click', function() {
+    $("body").append($temp);
+    $temp.val($url).select();
+    document.execCommand("copy");
+    $temp.remove();
+    })
+</script>
+
+<script src="../../lib/jquery/jquery.livequery.min.js"></script>
+<script>
+// popovers initialization
+$(function () {
+    $('[data-toggle="popover-click"]').popover();
+})
+
+// popover handler
+var $page = $('body');
+$page.livequery(
+    'div.popper', // the selector to match against
+    function(elem) { // a matched function
+        // for debug
+        // console.log("Caught!");
+        setTimeout(function(){
+            $('[data-toggle="popover-click"]').popover('hide');
+    },2000)       
+});
+
 </script>
 
 </body>
